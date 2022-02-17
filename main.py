@@ -1,5 +1,6 @@
 import os
 
+
 def get_data(file_path, file_encoding='UTF-8'):
     with open(file_path, encoding=file_encoding) as file:
         buffer = file.read().split('\n\n')
@@ -66,7 +67,13 @@ def main():
     pass
     data_path = os.path.join(os.getcwd(), 'recipes.txt')
     data = get_data(data_path)
-#
+    print(data)
+    print('+++++++++++++++++++++++++++++++++++++++++++++')
+
+    ingredients = get_shop_list_by_dishes(data,['Омлет', 'Запеченный картофель'], 3)
+    print(ingredients)
+
+
 # #Задание №3
     _dir = os.path.join(os.getcwd(), 'files')
     merge_files(_dir)
