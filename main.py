@@ -63,8 +63,7 @@ def merge_files(dir_path):
             f.write('\n')
 
 
-def main():
-    pass
+def main(): pass
     data_path = os.path.join(os.getcwd(), 'recipes.txt')
     data = get_data(data_path)
     print(data)
